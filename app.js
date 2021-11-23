@@ -87,8 +87,8 @@ app.post('/posts', async(req, res) => {
     }
 });
 
-app.get('/create', (req, res) => {
-    res.render('create');
+app.get('/addnewpost', (req, res) => {
+    res.render('addnewpost');
 });
 
 app.use((req, res) => {
