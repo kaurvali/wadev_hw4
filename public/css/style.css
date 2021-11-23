@@ -9,19 +9,21 @@ body {
     background-color: #b30000;
 }
 
-main {
-    min-height: calc(100vh - 110px);
-}
-
 main div.content-area {
-    margin: 0px auto;
-    padding: 50px 0;
-    padding-top: 70px;
-    display: grid;
-    flex-flow: row nowrap;
+    margin: 0px auto 0px auto;
+    padding: 1px 0;
+    margin-top: 80px;
+    margin-bottom: 40px;
     justify-content: center;
     width: 90%;
     max-width: 900px;
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 235px);
     background-color: white;
+}
+
+main div.content-area .title {
+    margin: 40px auto;
+    height: fit-content;
+    text-align: center;
+    width: 90%;
 }

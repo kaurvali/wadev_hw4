@@ -1,4 +1,4 @@
-nav {
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -9,25 +9,25 @@ nav {
     filter: drop-shadow(0 0px 3px rgb(119, 119, 119));
 }
 
-nav div {
+header div {
     height: 30px;
     flex-grow: 1;
     padding: 10px;
 }
 
-nav div input {
+header div input {
     height: 30px;
 }
 
-nav div img {
+header div img {
     height: 100%;
 }
 
-nav div #account {
+header div #account {
     float: right;
 }
 
-nav div.search-container form>input {
+header div.search-container form>input {
     box-sizing: border-box;
     height: 30px;
     width: 75%;
@@ -36,13 +36,13 @@ nav div.search-container form>input {
     border: 1px solid #e0e0e0;
 }
 
-nav div.search-container form>button:hover {
+header div.search-container form>button:hover {
     color: black;
     background-color: white;
     transition-duration: 0.2s;
 }
 
-nav div.search-container form>button {
+header div.search-container form>button {
     box-sizing: border-box;
     height: 30px;
     width: 25%;

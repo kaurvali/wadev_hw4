@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/post.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Single Post</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <main>
+            <div class="content-area">
+                <div class="title">
+                    <h1>A single post!</h1>
+                </div>
+                <div class="post">
+                    <div class="header">
+                        <a href="#"><img class="account" src="/images/account.png" alt="Account Photo"></a>
+                        <p id="author">
+                            <%=posts.author %>
+                        </p>
+                        <p id="time">
+                            <%= posts.time %>
+                        </p>
+                    </div>
+                    <div class="content">
+                        <!-- TODO - ADD IMAGE -->
+                    </div>
+                    <div class="text">
+                        <p id="title">
+                            <%= posts.title %>
+                        </p>
+                        <p id="body">
+                            <%= posts.body %>
+                        </p>
+                    </div>
+                    <div class="footer">
+                        <button class="post_button" data-del="<%= posts.id %>" ">Delete</button>
+                    </div>
+
+                </div>
+                <script>
+                    const delreq = document.querySelector('button.post_button');
+                    delreq.addEventListener('click', (e) => {
+                        const endpoint = `/${delreq.dataset.del}`;
+                        //console.log(endpoint);
+                        fetch(endpoint, {
+                            method: 'DELETE',
+                        }).then(window.location.href = '/')
+                    });
+                </script>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
