@@ -4,6 +4,8 @@ const app = express();
 // register the ejs view engine
 app.set('view engine', 'ejs');
 
+app.use(express.static('public'))
+
 // listen for requests on port 3000
 app.listen(3000);
 /* app.get() is used to respond to Get requests, and it takes two arguments:
