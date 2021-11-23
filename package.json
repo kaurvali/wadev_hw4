@@ -1,0 +1,23 @@
+{
+  "name": "wadev_hw4",
+  "version": "1.0.0",
+  "description": "wadev_hw4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaurvali/wadev_hw4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaurvali/wadev_hw4/issues"
+  },
+  "homepage": "https://github.com/kaurvali/wadev_hw4#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  }
+}
