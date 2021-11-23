@@ -8,3 +8,20 @@ body {
     padding: 0;
     background-color: #b30000;
 }
+
+main {
+    min-height: calc(100vh - 110px);
+}
+
+main div.content-area {
+    margin: 0px auto;
+    padding: 50px 0;
+    padding-top: 70px;
+    display: grid;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    min-height: calc(100vh - 230px);
+    background-color: white;
+}
