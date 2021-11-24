@@ -12,12 +12,12 @@ body {
 main div.content-area {
     margin: 0px auto 0px auto;
     padding: 1px 0;
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 40px;
     justify-content: center;
     width: 90%;
     max-width: 900px;
-    min-height: calc(100vh - 235px);
+    min-height: calc(100vh - 277px);
     background-color: white;
 }
 
