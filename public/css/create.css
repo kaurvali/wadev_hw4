@@ -1,0 +1,29 @@
+div.form {
+    margin: 40px auto;
+    height: fit-content;
+    width: 50%;
+}
+
+div.form textarea,
+div.form input {
+    overflow: auto;
+    resize: both;
+    min-width: 100%;
+    min-height: 24px;
+    max-height: 480px;
+}
+
+div.form button {
+    background: black;
+    color: white;
+    border: none;
+    height: 35px;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+div.form button:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}

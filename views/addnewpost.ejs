@@ -1,8 +1,9 @@
 <html lang="en">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=>, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/create.css" />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <title>Create a post</title>
 
@@ -15,12 +16,14 @@
                 </div>
                 <div class=form>
                     <form action="/posts" method="POST">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author" required maxlength="25"></textarea><br><br>
                         <label for="title">Post title:</label>
-                        <input type="text" id="title" name="title" required><br><br>
+                        <input type="text" id="title" name="title" required required maxlength="50"><br><br>
                         <label for="body">Post body:</label>
-                        <input type="text" id="body" name="body" required><br><br>
-                        <label for="urllink"> URL link:</label>
-                        <input type="text" id="urllink" name="urllink"></textarea><br><br>
+                        <textarea id="body" name="body"></textarea>
+                        <br><br>
+                        <!-- TODO - ADD IMAGE FIELD-->
                         <button>Submit</button>
                     </form>
                 </div>
