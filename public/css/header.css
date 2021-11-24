@@ -1,33 +1,36 @@
 header {
-    position: fixed;
     top: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: #ffffff;
-    align-items: center;
+    background-color: white;
     filter: drop-shadow(0 0px 3px rgb(119, 119, 119));
 }
 
-header div {
+header .header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+header .header div {
     height: 30px;
     flex-grow: 1;
     padding: 10px;
 }
 
-header div input {
+header .header div input {
     height: 30px;
 }
 
-header div img {
+header .header div img {
     height: 100%;
 }
 
-header div #account {
+header .header div #account {
     float: right;
 }
 
-header div.search-container form>input {
+header .header div.search-container form>input {
     box-sizing: border-box;
     height: 30px;
     width: 75%;
@@ -36,13 +39,13 @@ header div.search-container form>input {
     border: 1px solid #e0e0e0;
 }
 
-header div.search-container form>button:hover {
+header .header div.search-container form>button:hover {
     color: black;
     background-color: white;
     transition-duration: 0.2s;
 }
 
-header div.search-container form>button {
+header .header div.search-container form>button {
     box-sizing: border-box;
     height: 30px;
     width: 25%;
@@ -53,4 +56,20 @@ header div.search-container form>button {
     background-color: #b30000;
     color: white;
     font-weight: 600;
+}
+
+header .navigation {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+header .navigation a {
+    text-decoration: none;
+    color: #b30000;
+}
+
+header .navigation a:hover {
+    text-decoration: none;
+    color: black;
 }

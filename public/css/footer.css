@@ -7,9 +7,8 @@ footer {
     align-items: center;
 }
 
-footer .logo img {
-    height: 40px;
-    width: auto;
+footer .logo {
+    width: 250px;
 }
 
 footer .center {
@@ -18,7 +17,11 @@ footer .center {
 }
 
 footer .footer-nav {
-    display: inline;
+    width: 250px;
+}
+
+footer .navigation {
+    float: right;
 }
 
 footer a {
