@@ -40,7 +40,13 @@
                                 </p>
                             </div>
                             <div class="footer">
-                                <button>Like</button>
+                                <form action='/posts/<%= post.id %>' method="POST">
+                                    <button onclick="this.form.submit();this.onclick=null;">Like</button>
+                                </form>
+                                <p class="likes">
+                                    <%= post.likes %>
+                                    people like this!
+                                </p>
                             </div>
                         </div>
                         <% }) %>
@@ -50,6 +56,11 @@
 
             </div>
         </main>
+        <script>
+        // function IncreaseLikes(id) {
+        //     console.log(id);
+        // }
+            </script>
         <%- include('./partials/footer.ejs') %>
 </body>
 

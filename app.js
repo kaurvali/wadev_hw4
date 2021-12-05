@@ -24,7 +24,7 @@ app.get('/posts', async(req, res) => {
     try {
         console.log("get posts request has arrived");
         const posts = await pool.query(
-            "SELECT * FROM posts"
+            "SELECT * FROM posts ORDER BY time DESC"
         );
         res.render('posts', { posts: posts.rows });
     } catch (err) {
@@ -74,6 +74,26 @@ app.delete('/posts/:id', async(req, res) => {
     }
 });
 
+app.post('/posts/:id', async(req, res) => {
+    try {
+    const { id } = req.params;
+    const post = req.body;
+    console.log("update request has arrived");
+    const updatepost = await pool.query(
+    "UPDATE posts SET likes = likes + 1 WHERE id =$1", [id]
+    );
+    // reload page
+    console.log("get posts request has arrived");
+    const posts = await pool.query(
+        "SELECT * FROM posts ORDER BY time DESC"
+    );
+    res.render('posts', { posts: posts.rows });
+    } catch (err) {
+    console.error(err.message);
+    }
+   });
+   
+
 app.post('/posts', async(req, res) => {
     try {
         const post = req.body;
@@ -81,7 +101,7 @@ app.post('/posts', async(req, res) => {
         const newpost = await pool.query(
             "INSERT INTO posts(title, body, author) values ($1, $2, $3) RETURNING * ", [post.title, post.body, post.author]
         );
-        res.redirect('posts');
+        res.redirect("posts");
     } catch (err) {
         console.error(err.message)
     }

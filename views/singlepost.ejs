@@ -39,6 +39,13 @@
                         </p>
                     </div>
                     <div class="footer">
+                        <form action='/posts/<%= posts.id %>' method="POST">
+                            <button onclick="this.form.submit();this.onclick=null;">Like</button>
+                        </form>
+                        <p class="likes">
+                            <%= posts.likes %>
+                            people like this!
+                        </p>
                         <button class="post_button" data-del="<%= posts.id %>" ">DELETE</button>
                     </div>
 
