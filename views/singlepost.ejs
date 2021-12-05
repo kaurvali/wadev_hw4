@@ -18,36 +18,18 @@
                     <h1>A single post!</h1>
                 </div>
                 <div class="post">
-                    <div class="header">
-                        <a href="#"><img class="account" src="/images/account.png" alt="Account Photo"></a>
-                        <p id="author">
-                            <%=posts.author %>
-                        </p>
-                        <p id="time">
-                            <%= posts.time %>
-                        </p>
-                    </div>
-                    <div class="content">
-                        <!-- TODO - ADD IMAGE -->
-                    </div>
-                    <div class="text">
-                        <p id="title">
-                            <%= posts.title %>
-                        </p>
-                        <p id="body">
-                            <%= posts.body %>
-                        </p>
-                    </div>
+                    <%- include('./partials/postmain.ejs') %>
                     <div class="footer">
-                        <form action='/posts/<%= posts.id %>' method="POST">
+                        <form action='/posts/<%= post.id %>' method="POST">
                             <button onclick="this.form.submit();this.onclick=null;">Like</button>
                         </form>
                         <p class="likes">
-                            <%= posts.likes %>
+                            <%= post.likes %>
                             people like this!
                         </p>
-                        <button class="post_button" data-del="<%= posts.id %>" ">DELETE</button>
+                        <button class="post_button" data-del="<%= post.id %>" ">DELETE</button>
                     </div>
+
 
                 </div>
                 <script>

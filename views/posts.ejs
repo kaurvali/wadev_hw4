@@ -19,25 +19,9 @@
                 <% if (posts.length > 0) { %>
                     <% posts.forEach(post => { %>
                         <div class="post">
-                            <div class="header">
-                                <a href="#"><img class="account" src="/images/account.png" alt="Account Photo"></a>
-                                <p id="author">
-                                    <%=post.author %>
-                                </p>
-                                <p id="time">
-                                    <%= post.time %>
-                                </p>
-                            </div>
-                            <div class="content" onclick="location.href='/singlepost/<%= post.id %>'">
-                                <!-- TODO - ADD IMAGE -->
-                            </div>
-                            <div class="text" onclick="location.href='/singlepost/<%= post.id %>'">
-                                <p id="title">
-                                    <%= post.title %>
-                                </p>
-                                <p id="body">
-                                    <%= post.body %>
-                                </p>
+                            <div class="main" onclick="location.href='/singlepost/<%= post.id %>'">
+                                <%- include('./partials/postmain.ejs', {post:post}) %>
+
                             </div>
                             <div class="footer">
                                 <form action='/posts/<%= post.id %>' method="POST">
@@ -56,11 +40,6 @@
 
             </div>
         </main>
-        <script>
-        // function IncreaseLikes(id) {
-        //     console.log(id);
-        // }
-            </script>
         <%- include('./partials/footer.ejs') %>
 </body>
 

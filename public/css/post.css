@@ -59,7 +59,7 @@ div.post div.text #body {
     margin: 15px 10px;
 }
 
-div.post div.footer button {
+div.post button {
     background: black;
     color: white;
     border: none;
@@ -69,7 +69,7 @@ div.post div.footer button {
     margin: 10px;
 }
 
-div.post div.footer button:hover {
+div.post button:hover {
     color: black;
     background: white;
     border: 1px solid black;
