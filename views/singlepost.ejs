@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/post.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/button.js"></script>
     <title>Single Post</title>
 </head>
 
@@ -19,15 +21,15 @@
                 </div>
                 <div class="post">
                     <%- include('./partials/postmain.ejs') %>
-                    <div class="footer">
-                        <form action='/posts/<%= post.id %>' method="POST">
-                            <button onclick="this.form.submit();this.onclick=null;">Like</button>
-                        </form>
-                        <p class="likes">
-                            <%= post.likes %>
-                            people like this!
-                        </p>
-                        <button class="post_button" data-del="<%= post.id %>" ">DELETE</button>
+                        <div class="footer">
+                            <form action='/posts/<%= post.id %>' method="POST">
+                                <button class="like-button" onclick="this.form.submit();this.onclick=null;" id="button<%= post.id %>">Like</button>
+                            </form>
+                            <p class="likes">
+                                <%= post.likes %>
+                                    people like this!
+                            </p>
+                            <button class="post_button" data-del="<%= post.id %>" ">DELETE</button>
                     </div>
 
 

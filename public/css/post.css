@@ -74,11 +74,19 @@ div.post button:hover {
     background: white;
     border: 1px solid black;
 }
-div.post div.footer{
+
+button[disabled="disabled"]:disabled {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+
+div.post div.footer {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-div.post div.footer p{
+
+div.post div.footer p {
     padding-left: 5px;
 }
