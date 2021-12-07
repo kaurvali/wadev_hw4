@@ -4,8 +4,6 @@ $(document).ready(function() {
         $(key).attr("disabled", true);
     }
 
-    //$(disbledBtn).attr("disabled", true); // set the attribute by the id
-
     $(".like-button").click(function() {
         var id = $(this).attr('id');
         $('#' + id).attr("disabled", true);
