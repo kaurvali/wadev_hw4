@@ -4,11 +4,8 @@
         <%=post.author %>
     </p>
     <p id="time">
-        <%= post.time %>
+        <%= new Date(post.time).toLocaleString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour12: false, hour: '2-digit', minute: '2-digit' }) %>
     </p>
-</div>
-<div class="content">
-    <!-- TODO - ADD IMAGE -->
 </div>
 <div class="text">
     <p id="title">
