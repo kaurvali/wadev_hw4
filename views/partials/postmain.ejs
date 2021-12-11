@@ -4,7 +4,7 @@
         <%=post.author %>
     </p>
     <p id="time">
-        <%= new Date(post.time).toLocaleString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour12: false, hour: '2-digit', minute: '2-digit' }) %>
+        <%= post.time.toLocaleString('en-GB')%>
     </p>
 </div>
 <div class="content" id="body">
