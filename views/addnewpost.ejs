@@ -21,15 +21,44 @@
                         <label for="title">Post title:</label>
                         <input type="text" id="title" name="title" required required maxlength="50"><br><br>
                         <label for="body">Post body:</label>
-                        <textarea id="body" name="body"></textarea>
-                        <br><br>
+                        <input type="url" id="body" name="body"><br><br>
                         <!-- TODO - ADD IMAGE FIELD-->
-                        <button>Submit</button>
+
+                        <button @click="addPost">Submit</button>
                     </form>
                 </div>
             </div>
         </main>
         <%- include('./partials/footer.ejs') %>
 </body>
+
+<script>
+
+    import axios from 'axios'
+
+    export default {
+        name: 'posts',
+        data: function () {
+            return {
+                post: {
+                    author: null,
+                    title: null,
+                    body: null,
+                }
+            }
+        },
+        methods: {
+            addPost: function () {
+                axios.post('posts/', this.post)
+                    .then(() => {
+                        this.refresh();
+                    })
+            },
+        },
+        props: {
+            refresh: Function
+        }
+    }
+</script>
 
 </html>
