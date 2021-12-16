@@ -16,13 +16,12 @@
                 </div>
                 <div class=form>
                     <form action="/posts" method="POST">
-                        <label for="author">Author:</label>
+                        <label for="author">Author:*</label>
                         <input type="text" id="author" name="author" required maxlength="25"></textarea><br><br>
-                        <label for="title">Post title:</label>
-                        <input type="text" id="title" name="title" required required maxlength="50"><br><br>
-                        <label for="body">Post body:</label>
-                        <input type="url" id="body" name="body"><br><br>
-                        <!-- TODO - ADD IMAGE FIELD-->
+                        <label for="title">Post title:*</label>
+                        <input type="text" id="title" name="title" required maxlength="50"><br><br>
+                        <label for="body">Post image (URL):*</label>
+                        <input type="url" id="body" name="body" required><br><br>
 
                         <button @click="addPost">Submit</button>
                     </form>
@@ -33,12 +32,11 @@
 </body>
 
 <script>
-
     import axios from 'axios'
 
     export default {
         name: 'posts',
-        data: function () {
+        data: function() {
             return {
                 post: {
                     author: null,
@@ -48,7 +46,7 @@
             }
         },
         methods: {
-            addPost: function () {
+            addPost: function() {
                 axios.post('posts/', this.post)
                     .then(() => {
                         this.refresh();
